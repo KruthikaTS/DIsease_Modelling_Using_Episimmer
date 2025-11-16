@@ -1,11 +1,5 @@
 # Disease Modelling Epidemic Simulation 
 
----
-
-# 📘 **README.md — Disease Modelling Using Episimmer**
-
-```
-# Disease Modelling Using Episimmer
 
 This project demonstrates how epidemic progression can be modelled using a
 simplified version of the Episimmer framework.
