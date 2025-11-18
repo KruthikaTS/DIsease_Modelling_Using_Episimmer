@@ -3,7 +3,7 @@
 Stochastic SIR-style simulation (4 states: normal, bitten, dead, zombie)
 Produces a plot similar to the image you provided.
 
-How it works (matching the UserModel shown in your screenshots):
+How it works :
 - Start population with proportions:
     normal = 0.92, bitten = 0.08, dead = 0.0, zombie = 0.0
 - Per-step events:
@@ -27,15 +27,15 @@ SEED = 42                 # reproducible
 np.random.seed(SEED)
 random.seed(SEED)
 
-POPULATION = 50           # matches agents.txt (50) from video screenshot
+POPULATION = 50           
 DAYS = 30                 # 0..30
-BETA = 0.45               # infection intensity (tune to produce similar curves)
+BETA = 0.45               # infection intensity 
 # The "UserModel" transition probabilities from screenshots:
 P_NORMAL_TO_BITTEN = 0.10
 P_BITTEN_TO_DEAD = 0.099
 P_DEAD_TO_ZOMBIE = 0.07
 
-# Starting proportions from UserModel (screenshot)
+# Starting proportions from UserModel 
 PROP_NORMAL = 0.92
 PROP_BITTEN = 0.08
 PROP_DEAD = 0.0
@@ -88,7 +88,7 @@ for day in range(DAYS):
     new_zombie = np.random.binomial(D, P_DEAD_TO_ZOMBIE) if D > 0 else 0
 
     # 3) (Optional) background infection: some small fraction of normals spontaneously bitten
-    #    Not necessary, commented out. Uncomment to add background noise.
+   
     # background = np.random.binomial(S, 0.001)
 
     # update counts
@@ -121,7 +121,7 @@ plt.ylabel('Population', fontsize=12)
 plt.grid(True, which='both', linestyle='-', linewidth=0.6, alpha=0.6)
 plt.legend(frameon=True)
 
-# style tweaks to more closely match your screenshot
+
 ax = plt.gca()
 ax.set_axisbelow(True)
 ax.set_yticks(np.arange(0, max(50, int(POPULATION*0.9)) + 1, 5))
