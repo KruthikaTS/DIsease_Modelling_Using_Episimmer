@@ -1,7 +1,7 @@
 # main.py
 """
 Stochastic SIR-style simulation (4 states: normal, bitten, dead, zombie)
-Produces a plot similar to the image you provided.
+
 
 How it works :
 - Start population with proportions:
