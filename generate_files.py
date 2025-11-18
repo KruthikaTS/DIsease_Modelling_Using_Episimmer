@@ -6,7 +6,6 @@ Generates all required input files for the disease modelling project:
 - monday.txt → sunday.txt
 - event_files_list.txt
 
-This matches the structure shown in the video.
 """
 
 # ------------------------
